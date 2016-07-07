@@ -1,7 +1,8 @@
 class ListSerializer < ActiveModel::Serializer
-  attributes :id, :created_at, :list_name
-  def list_name
-    object.list_name
+  attributes :id, :created_at, :name, :permissions
+  
+  def name
+    object.name
   end
 
   def created_at
